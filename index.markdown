@@ -4,12 +4,13 @@
 
 layout: home
 ---
+## Swapnil Lothe
 
 🌐 [LinkedIn](https://www.linkedin.com/in/swapnil-lothe-884572199/) / [GitHub](https://github.com/swapnillothe)
 
 ---
 
-## 👩‍💻 Summary
+## 👩‍💻 Bio
 
 Enthusiastic and skilled Software engineer with a passion for finding creative solution. Adept at xp practices. Excited about working similar enthusiast nerds.
 
@@ -70,3 +71,12 @@ Grade: A+
 - [LinkedIn](https://www.linkedin.com/in/swapnil-lothe-884572199/)
 - [Email](mailto:swapnillothe15@gmail.com)
 - [GitHub](https://github.com/swapnillothe)
+
+<style>
+  .footer {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+</style>
