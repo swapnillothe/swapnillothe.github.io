@@ -5,8 +5,6 @@
 layout: home
 ---
 
-# Swapnil Lothe
-
 🌐 [LinkedIn](https://www.linkedin.com/in/swapnil-lothe-884572199/) / [GitHub](https://github.com/swapnillothe)
 
 ---
