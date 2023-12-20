@@ -1,0 +1,37 @@
+---
+permalink: /profile
+layout: default
+title: Profile
+---
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ page.title }}</title>
+    <link rel="shortcut icon" href="images/profile-icon.png" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+			{% capture inlineCSS %}
+			{% include profile.css %}
+			{% endcapture %}
+
+			{{ inlineCSS | scssify }}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>
+        <section>
+            <div class="profile-background-image">
+                <img alt="Background Image"
+                     src="images/background.jpeg">
+            </div>
+            <div class="display-flex">
+                <img src="images/profile.png" alt="Swapnil Lothe"
+                     class="profile-image">
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
