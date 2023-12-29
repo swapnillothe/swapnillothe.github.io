@@ -5,84 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swapnil Lothe - Software Engineer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333;
-        }
-
-        header {
-            background-color: #4285f4;
-            color: #fff;
-            text-align: center;
-            padding: 2em 0;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        h1 {
-            color: #4285f4;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #4285f4;
-            color: #fff;
-        }
-
-        /* Responsive Styles */
-        @media only screen and (max-width: 600px) {
-            main {
-                padding: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>
-        <h1>Swapnil Lothe</h1>
-        <p>Software Engineer</p>
+    <header class="header">
+        <div class="header-content">
+            <h1>Swapnil Lothe</h1>
+            <p>Software Engineer</p>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <section id="about" class="section">
             <h2>About Me</h2>
             <p>Enthusiastic and skilled Software Engineer with a passion for finding creative solutions. Adept at XP practices. Excited about collaborating with similar enthusiast nerds.</p>
         </section>
 
-        <section>
+        <section id="skills" class="section">
             <h2>Skills</h2>
-            <ul>
+            <ul class="skills-list">
                 <li>Version Control</li>
                 <li>Reactive Programming</li>
                 <li>DevOps</li>
@@ -98,33 +49,40 @@
             </ul>
         </section>
 
-        <section>
+        <section id="experience" class="section">
             <h2>Experience</h2>
-            <p><strong>Software Engineer</strong><br>Equal experts | Pune, Maharashtra, India<br>Feb 2023 - Present | more than 10 months</p>
-
-            <p><strong>Application Developer - Consultant</strong><br>Thoughtworks | Pune, Maharashtra, India<br>Jul 2018 - Mar 2023 | 4 yrs 9 months</p>
-
-            <p><strong>Key Learnings:</strong></p>
-            <ul>
-                <li>Orchestrated the end-to-end development of a new product journey on the lending platform using Kotlin and incorporating reactive programming.</li>
-                <li>Engineered reusable capabilities for EKyc, VKyc, and Payment Gateway, enhancing the scalability of the platform.</li>
-                <li>Successfully identified and resolved potential issues within the platform, ensuring optimal performance.</li>
-                <li>Optimized processes by identifying asynchronous customer steps in the journey and resequencing them for improved efficiency.</li>
-                <li>Seamlessly integrated new features into the customer/backoffice journey, ensuring a smooth and uninterrupted user experience.</li>
-                <li>Implemented comprehensive logging, enabling clients to create meaningful dashboards for enhanced insights.</li>
-                <li>Fostered collaborative code reviews and embraced XP practices for continuous improvement.</li>
-            </ul>
+            <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <p>Equal experts | Pune, Maharashtra, India | Feb 2023 - Present</p>
+                <ul>
+                    <li>Orchestrated the end-to-end development of a new product journey on the lending platform using Kotlin and incorporating reactive programming.</li>
+                    <li>Engineered reusable capabilities for EKyc, VKyc, and Payment Gateway, enhancing the scalability of the platform.</li>
+                    <li>Successfully identified and resolved potential issues within the platform, ensuring optimal performance.</li>
+                    <li>Optimized processes by identifying asynchronous customer steps in the journey and resequencing them for improved efficiency.</li>
+                    <li>Seamlessly integrated new features into the customer/backoffice journey, ensuring a smooth and uninterrupted user experience.</li>
+                    <li>Implemented comprehensive logging, enabling clients to create meaningful dashboards for enhanced insights.</li>
+                    <li>Fostered collaborative code reviews and embraced XP practices for continuous improvement.</li>
+                </ul>
+            </div>
+            <!-- Add more experience items as needed -->
         </section>
 
-        <section>
+        <section id="education" class="section">
             <h2>Education</h2>
-            <p><strong>Diploma of Education, Civil Engineering</strong><br>Dr. Babasaheb Ambedkar Marathwada University, Aurangabad<br>May 2015 - Mar 2018<br>Grade: Passed with Distinction</p>
-
-            <p><strong>Bachelor of Computer Application, Computer Programming</strong><br>Alagappa University<br>Dec 2022<br>Grade: A+</p>
+            <div class="education-item">
+                <h3>Diploma of Education, Civil Engineering</h3>
+                <p>Dr. Babasaheb Ambedkar Marathwada University, Aurangabad | May 2015 - Mar 2018</p>
+                <p>Grade: Passed with Distinction</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Computer Application, Computer Programming</h3>
+                <p>Alagappa University | Dec 2022</p>
+                <p>Grade: A+</p>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Contact: swapnillothe15@gmail.com | GitHub: <a href="https://github.com/swapnillothe" target="_blank">github.com/swapnillothe</a></p>
     </footer>
 </body>
