@@ -7,3 +7,5 @@ Gemfile.lock
 vendor
 _site
 .jekyll-cache
+node_modules/
+yarn.lock
