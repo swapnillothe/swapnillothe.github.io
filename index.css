@@ -54,3 +54,15 @@ body {
     transform: scale(1.3) rotate(0deg);
     color: #ffdd57;
 }
+
+p {
+	user-select: none;
+}
+
+.user-name {
+	user-select: none;
+}
+
+.designation {
+	user-select: none;
+}
