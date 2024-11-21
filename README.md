@@ -40,10 +40,7 @@ This is a personal portfolio website built to highlight my professional skills, 
 
 ### **Screenshots**
 #### Home Page
-![Home Page](assets/screenshots/home.png)
-
-#### Projects Section
-![Projects Section](assets/screenshots/projects.png)
+![Home Page](assets/images/github-profile.png)
 
 ---
 
