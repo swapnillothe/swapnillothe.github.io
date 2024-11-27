@@ -39,25 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const graphql = JSON.stringify({
-    query: "\n    query recentAcSubmissions($username: String!, $limit: Int!) {\n  recentAcSubmissionList(username: $username, limit: $limit) {\n    id\n    title\n    titleSlug\n    timestamp\n  }\n}\n    ",
-    variables: {"username": "swapnillothe", "limit": 15}
-})
-const requestOptions = {
-    method: "POST",
-    mode: 'no-cors',
-    headers: {'content-type': 'application/json'},
-    body: graphql
-};
+const pTag = (text) => {
+    const p = document.createElement('p');
+    p.innerText = text
+    return p
+}
 
-fetch("https://leetcode.com/graphql/", requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.error(error));
-
-fetch('https://cat-fact.herokuapp.com/facts/')
+fetch("https://proxy-sl.vercel.app/api/leetcode")
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(({data}) => data.matchedUser.submitStats.acSubmissionNum)
+    .then(stats => {
+        const statsElement = document.getElementById("leetcode-stats");
+        statsElement.innerHTML = "";
+        stats.forEach(({difficulty, count}) => {
+            statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`))
+        });
+    })
     .catch(error => console.error('Error:', error));
 
 console.log('coming 1 ')
