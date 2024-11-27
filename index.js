@@ -38,3 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
         body.appendChild(nameElement);
     });
 });
+
+const graphql = JSON.stringify({
+    query: "\n    query recentAcSubmissions($username: String!, $limit: Int!) {\n  recentAcSubmissionList(username: $username, limit: $limit) {\n    id\n    title\n    titleSlug\n    timestamp\n  }\n}\n    ",
+    variables: {"username": "swapnillothe", "limit": 15}
+})
+const requestOptions = {
+    method: "POST",
+    mode: 'no-cors',
+    headers: {'content-type': 'application/json'},
+    body: graphql
+};
+
+fetch("https://leetcode.com/graphql/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+
+fetch('https://cat-fact.herokuapp.com/facts/')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+console.log('coming 1 ')
