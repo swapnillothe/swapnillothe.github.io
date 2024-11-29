@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const pTag = (text) => {
+const pTag = (text, className) => {
     const p = document.createElement('p');
     p.innerText = text
+    p.className = className
     return p
 }
 
@@ -51,10 +52,10 @@ fetch("https://proxy-sl.vercel.app/api/leetcode")
     .then(stats => {
         const statsElement = document.getElementById("leetcode-stats");
         statsElement.innerHTML = "";
+        const solved = stats.find(({difficulty}) => difficulty === 'All').count
+        statsElement.appendChild(pTag(`Target: ${Math.round((solved / 50) + 1) * 50} problems`, 'target'))
         stats.forEach(({difficulty, count}) => {
-            statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`))
+            statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`, difficulty.toLowerCase()))
         });
     })
     .catch(error => console.error('Error:', error));
-
-console.log('coming 1 ')

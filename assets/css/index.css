@@ -46,7 +46,8 @@ html.dark {
 	--warning-text: #71651c;
 	--danger-text: #7c161e;
 	--muted-text: #949ba2;
-	--primary-inverse: #41403e
+	--primary-inverse: #41403e;
+	--focus-yellow: #ffdd57;
 }
 
 html {
@@ -71,7 +72,6 @@ main {
 
 a {
 	background-color: transparent;
-	-webkit-text-decoration-skip: objects
 }
 
 img {
@@ -127,7 +127,6 @@ details {
 }
 
 .paper {
-	background-color: #41403e;
 	background-color: var(--main-background);
 	border: 1px solid #cdcccb;
 	box-shadow: -1px 5px 35px -9px rgba(0, 0, 0, .2);
@@ -146,7 +145,6 @@ details {
 }
 
 html {
-	color: #41403e;
 	color: var(--primary);
 	font-size: 20px;
 	overflow: scroll;
@@ -187,33 +185,22 @@ h6 {
 }
 
 img {
-	border-bottom-left-radius: 15px 255px;
-	border-bottom-right-radius: 225px 15px;
-	border-top-left-radius: 255px 15px;
-	border-top-right-radius: 15px 225px;
-	border: 2px solid #41403e;
-	border-color: var(--primary);
+	border-radius: 255px 15px 15px 225px / 15px 255px 225px 15px;
+	border: 2px solid var(--primary-light);
 	display: block;
 	height: auto;
-	max-width: 100%
+	max-width: 100%;
 }
 
 .paper-btn, [type=button] {
-	border-bottom-left-radius: 15px 255px;
-	border-bottom-right-radius: 225px 15px;
-	border-top-left-radius: 255px 15px;
-	border-top-right-radius: 15px 225px;
-	transition: all 235ms ease 0s;
+	border-radius: 255px 15px 15px 225px / 15px 255px 225px 15px;
+	border: 2px solid var(--primary);
 	box-shadow: 15px 28px 25px -18px rgba(0, 0, 0, .2);
 	transition: all 235ms ease-in-out 0s;
-	color: #41403e;
 	color: var(--primary);
-	background-color: #41403e;
 	background-color: var(--main-background);
 	align-self: center;
 	background-image: none;
-	border: 2px solid #41403e;
-	border-color: var(--primary);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
@@ -235,8 +222,7 @@ img {
 }
 
 .paper-btn:focus, [type=button]:focus {
-	border: 2px solid #41403e;
-	border-color: var(--secondary);
+	border: 2px solid var(--secondary);
 	box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, .3)
 }
 
@@ -251,7 +237,6 @@ img {
 }
 
 a {
-	color: #41403e;
 	color: var(--secondary);
 	background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
 	background-position: 0 90%;
@@ -264,7 +249,6 @@ a, a:visited {
 }
 
 a:visited {
-	color: #41403e;
 	color: var(--primary)
 }
 
@@ -400,12 +384,12 @@ body {
 
 .name:hover {
 	transform: scale(1.3) rotate(0);
-	color: #ffdd57
+	color: var(--focus-yellow)
 }
 
 .paper-btn:hover {
 	transform: scale(1.3) rotate(0);
-	color: #ffdd57
+	color: var(--focus-yellow)
 }
 
 .sections {
@@ -421,5 +405,38 @@ body {
 .other-section {
 	display: flex;
 	flex-direction: column;
+	border-radius: 255px 15px 15px 225px / 15px 255px 225px 15px;
+	border: 2px solid var(--primary);
+	max-height: max-content;
+	min-height: 350px;
+	padding: 10px;
 	/*border: red 4px solid;*/
 }
+
+.other-section:hover {
+	transform: scale(1.05) rotate(0);
+}
+
+.other-section > div > div > p:hover {
+	color: var(--focus-yellow);
+}
+
+.other-section > div > h4:hover {
+	color: var(--focus-yellow);
+}
+
+/*.target {*/
+/*	color: var(--focus-yellow);*/
+/*}*/
+
+/*.easy {*/
+/*	color: var(--success-light-10);*/
+/*}*/
+
+/*.medium {*/
+/*	color: var(--warning-light-10);*/
+/*}*/
+
+/*.hard {*/
+/*	color: var(--danger-light-10);*/
+/*}*/
