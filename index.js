@@ -53,7 +53,8 @@ fetch("https://proxy-sl.vercel.app/api/leetcode")
         const statsElement = document.getElementById("leetcode-stats");
         statsElement.innerHTML = "";
         const solved = stats.find(({difficulty}) => difficulty === 'All').count
-        statsElement.appendChild(pTag(`Target: ${Math.round((solved / 50) + 1) * 50} problems`, 'target'))
+        const TARGET = 10;
+        statsElement.appendChild(pTag(`Target: ${Math.round((solved / TARGET) + 1) * TARGET} problems`, 'target'))
         stats.forEach(({difficulty, count}) => {
             statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`, difficulty.toLowerCase()))
         });
