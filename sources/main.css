@@ -1,0 +1,598 @@
+/* Main CSS file that imports all other CSS files */
+@import 'styles/base.css';
+@import 'styles/layout.css';
+@import 'styles/components.css';
+@import 'styles/animations.css';
+@import 'styles/responsive.css';
+
+/* Any additional styles or overrides can be added here */
+
+body{
+    margin:0;
+    padding:0;
+    color:white;
+    height: 100%;
+    background-color: #000000;
+    /*    old font     font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;*/
+    font-family: D-DIN-Regular;
+
+}
+
+.centered-container,
+.centered-container2,
+.centered-container3 {
+    display: flex;
+    justify-content: center;
+}
+
+.centered-container {
+    align-items: center;
+    height: auto;
+}
+
+.centered-container2 {
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+.centered-container3 {
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+
+.background {
+    /*background-image: url('sources/imgs/1.jpg'); /* Replace with your image path */
+    background-size: 170px;
+    background: url('imgs/milkyway.jpg') center/cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    background-color: #000000;
+
+}
+#firstsection{
+    transform: translateZ(-40px) scale(5);
+    transform-style: preserve-3d;
+
+}
+.show-background {
+    opacity: 1;
+}
+#glowbox {
+    width: 169px;
+    height: 169px;
+    border-radius: 100%;
+    color: #000000;
+    transition: box-shadow 1s ease; /* Adjust the duration and easing as needed */
+}
+
+.initial-shadow {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.final-shadow {
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.7);
+}
+h1 {
+    margin-top: 67px;
+    margin-bottom: 67px;
+    text-align: center;
+}
+
+.name{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.2s;
+
+}
+.name:hover{
+    transition: 0.2s;
+    font-size: 32px;
+
+}
+
+
+
+/*------------------------------------hello------------------------------------*/
+
+.helloo {
+    margin-top: 120px;
+    padding: 100px 20px 150px;
+    background: url('sources/imgs/earth.png') center/cover no-repeat;
+    text-align: center;
+    position: relative;
+    transform: translateZ(-2.5px) scale(1.25);    
+}
+.helloo * {
+    pointer-events: auto; /* Re-enable pointer events for .helloo children */
+  }
+#whoami {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+#whoami h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.subtitle p {
+    margin: 10px 0;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: rgba(0, 98, 255, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(0, 98, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid rgba(0, 98, 255, 0.7);
+    color: rgba(0, 98, 255, 0.9);
+}
+
+.cta-button.secondary:hover {
+    background-color: rgba(0, 98, 255, 0.2);
+    color: white;
+}
+
+.asteroid {
+    width: 200px;
+    margin-top: 40px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@media (max-width: 768px) {
+    #whoami h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .asteroid {
+        width: 150px;
+    }
+}
+
+/*------------------------------------content------------------------------------*/
+.content{
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    margin-top: 0px;
+}
+/*------------------------------------achievements------------------------------------*/
+#ach{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
+#ach h2{
+    font: 60px/45px D-DIN-Bold,Arial,Verdana,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    font-size: 55px;
+    text-align: center;
+
+}
+.box h2{
+    color: rgb(0, 98, 255);
+}
+#boxes{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+}
+.box{
+    margin-top: 4%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.element{
+    width: 50%; /* Each div takes 50% of the container's width */
+    padding: 20px;
+
+}
+.bright {
+    filter: brightness(0.8); /* Adjust the value as needed, e.g., 0.7 for less brightness */
+}
+
+.element img,iframe{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    width:auto;
+    max-width:400px !important;
+    max-height: 400px !important;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    /*
+    border-color: #fffbfb;
+    border-width: 3px;
+    border-style:solid;
+    box-shadow: 0 0 15px 5px rgba(117, 117, 117, 0.7);
+    */
+
+}
+.element img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.element iframe{
+    height: 90%;
+}
+.element ul li h2{
+    font-size: 25px !important;
+
+}
+.element ul li a{
+    color: rgb(97, 155, 248);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s;
+
+}
+.element ul li{
+    padding: 10px;
+    font-size: 18px;
+}
+
+.element ul li a:hover{
+    color: #747373;
+    text-decoration: underline;
+    transition: 0.2s;
+
+}
+
+@media (max-width: 768px) {
+    .col-6 img, iframe{
+        width: 100%; /* Make columns full-width on screens smaller than 768px */
+    }
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .element {
+    flex: 1;
+    min-width: 300px; /* Set a minimum width for each box */
+    margin: 10px; /* Add some spacing between the boxes */
+    padding: 0px;
+  }
+  .element ul{
+    list-style: none;
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 559px) {
+    .swap:nth-child(1) {
+      order: 2; /* Swap Box 1 and Box 2 */
+    }
+    
+    .swap:nth-child(2) {
+      order: 1; /* Swap Box 1 and Box 2 */
+    }
+    .element{
+        margin: 0px;
+    }
+  }
+/*------------------------------------small js projects------------------------------------*/
+#linklist{
+    color: rgb(97, 155, 248);
+}
+#twitterembed{
+    display: flex;
+    justify-content: center;
+}
+/*------------------------------------img slider for aoc------------------------------------*/
+  
+/*------------------------------------navbar------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+    padding-top: 20px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Style the navigation list */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+/* Style the navigation links */
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+.dot{
+    width: auto;
+}
+.socials a:hover{
+    width: 36px;
+    height: 36px;
+}
+
+/*------------------------------------loading------------------------------------*/
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* or any color that matches your design */
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.milky-way {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.milky-way.fade-in {
+    opacity: 1;
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff; /* or any color that contrasts with your background */
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+    0%, 100% { 
+        transform: scale(0.0);
+    } 50% { 
+        transform: scale(1.0);
+    }
+}
+
+/* Remove the old loader styles */
+/* #loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+} */
+
+.aoc-images {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    min-width: 400px; /* Set a minimum width for each box */
+
+}
+
+.aoc-2023, .aoc-2022, .aoc-2024 {
+    position: absolute;
+    max-width: 60% !important;
+    max-height: 60% !important;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.aoc-2022 {
+    transform: rotate(-5deg) translateX(-15%);
+    z-index: 1;
+}
+
+.aoc-2023 {
+    transform: rotate(0deg) translateX(0%);
+    z-index: 2;
+}
+
+.aoc-2024 {
+    transform: rotate(5deg) translateX(15%);
+    z-index: 3;
+    opacity: 0; /* Initially invisible */ 
+    pointer-events: none; /* Prevents interaction with the invisible image */
+}
+
+.aoc-images:hover .aoc-2022 {
+    transform: rotate(-10deg) translateX(-20%);
+}
+
+.aoc-images:hover .aoc-2023 {
+    transform: rotate(0deg) translateY(-5%);
+}
+
+.aoc-images:hover .aoc-2024 {
+    transform: rotate(10deg) translateX(20%);
+    opacity: 1; /* Make visible on hover */
+}
+
+@media (max-width: 768px) {
+    .aoc-images {
+        height: 600px;
+    }
+    
+    .aoc-2023, .aoc-2022, .aoc-2024 {
+        max-width: 70% !important;
+        max-height: 70% !important;
+    }
+}
+
+#contact {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin:auto;
+    max-width: 600px;
+}
+
+#contact h2 {
+    margin-top: 5px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 98, 255, 0.7);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    background-color: rgba(233, 233, 233, 0.7);
+    color: #000;
+}
+.star-container {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .constellation-star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .constellation-star.hovered {
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+  }
+  
+  .star-name {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 20;
+  }
+
+
