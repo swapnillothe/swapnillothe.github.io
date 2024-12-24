@@ -46,17 +46,22 @@ const pTag = (text, className) => {
     return p
 }
 
-fetch("https://proxy-sl.vercel.app/api/leetcode")
-    .then(response => response.json())
-    .then(({data}) => data.matchedUser.submitStats.acSubmissionNum)
-    .then(stats => {
-        const statsElement = document.getElementById("leetcode-stats");
-        statsElement.innerHTML = "";
-        const solved = stats.find(({difficulty}) => difficulty === 'All').count
-        const TARGET = 10;
-        statsElement.appendChild(pTag(`Target: ${Math.round((solved / TARGET) + 1) * TARGET} problems`, 'target'))
-        stats.forEach(({difficulty, count}) => {
-            statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`, difficulty.toLowerCase()))
-        });
-    })
-    .catch(error => console.error('Error:', error));
+function fillLeetCodeStats() {
+    fetch("https://proxy-sl.vercel.app/api/leetcode")
+        .then(response => response.json())
+        .then(({data}) => data.matchedUser.submitStats.acSubmissionNum)
+        .then(stats => {
+            const statsElement = document.getElementById("leetcode-stats");
+            statsElement.innerHTML = "";
+            const solved = stats.find(({difficulty}) => difficulty === 'All').count
+            const TARGET = 10;
+            statsElement.appendChild(pTag(`Target: ${Math.round((solved / TARGET) + 1) * TARGET} problems`, 'target'))
+            stats.forEach(({difficulty, count}) => {
+                statsElement.appendChild(pTag(`${difficulty}: ${count} problems solved`, difficulty.toLowerCase()))
+            });
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+window.onfocus = fillLeetCodeStats;
+window.onload = fillLeetCodeStats;
